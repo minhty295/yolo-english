@@ -2,6 +2,8 @@ package com.yolo.entities;
 import java.io.Serializable;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.*;
 
 
@@ -23,6 +25,7 @@ public class Level implements Serializable {
 
 	//bi-directional many-to-one association to Student
 	@OneToMany(mappedBy="level")
+	@JsonBackReference
 	private List<Student> students;
 
 	public Level() {

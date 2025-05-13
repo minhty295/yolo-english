@@ -1,16 +1,6 @@
 package com.yolo.helpers;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 
-@NoArgsConstructor
-@AllArgsConstructor
-@Data
-@Getter
-@Setter
 public class ApiResponse<T> {
     private int code;
     private String message;
@@ -21,4 +11,35 @@ public class ApiResponse<T> {
         this.message = message;
         this.data = data;
     }
+
+	public ApiResponse() {
+		super();
+	}
+
+	public int getCode() {
+		return code;
+	}
+
+	public void setCode(int code) {
+		this.code = code;
+	}
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
+	public T getData() {
+		return data;
+	}
+
+	public void setData(T data) {
+		this.data = data;
+	}
+    
+    
+    
 }

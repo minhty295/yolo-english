@@ -3,6 +3,8 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import jakarta.persistence.*;
 
 
@@ -63,6 +65,7 @@ public class Student implements Serializable {
 
 	//bi-directional many-to-one association to Level
 	@ManyToOne
+	@JsonManagedReference
 	private Level level;
 
 	public Student() {

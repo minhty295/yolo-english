@@ -1,5 +1,8 @@
 package com.yolo.services;
 
-public class TeacherService {
+import org.springframework.stereotype.Service;
 
+@Service
+public class TeacherService {
+    
 }
