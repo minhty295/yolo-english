@@ -1,51 +1,47 @@
 package com.yolo.responses;
 
+import java.time.LocalDate;
 
 public class StudentRes {
-    private Integer id;
+    private Long id;
     private String address;
-    private String birthday;
+    private LocalDate birthday;
     private String email;
     private String fullName;
-    private Integer gender;
+    private String gender;
     private String parentName;
     private String parentPhone;
     private String phone;
     private String relationship;
-    private Integer status;
+    private int status;
     private String studentCode;
-    private Level level;
-    
-    
-    public StudentRes() {
-		super();
-	}
+    private StudentLevelRes level;
 
-    public StudentRes(Integer id, String address, String birthday, String email, String fullName, Integer gender,
-			String parentName, String parentPhone, String phone, String relationship, Integer status,
-			String studentCode, Level level) {
-		super();
-		this.id = id;
-		this.address = address;
-		this.birthday = birthday;
-		this.email = email;
-		this.fullName = fullName;
-		this.gender = gender;
-		this.parentName = parentName;
-		this.parentPhone = parentPhone;
-		this.phone = phone;
-		this.relationship = relationship;
-		this.status = status;
-		this.studentCode = studentCode;
-		this.level = level;
-	}
+    // ✅ Constructor bắt buộc:
+    public StudentRes(Long id, String address, LocalDate birthday, String email,
+                      String fullName, String gender, String parentName, String parentPhone,
+                      String phone, String relationship, int status, String studentCode,
+                      StudentLevelRes level) {
+        this.id = id;
+        this.address = address;
+        this.birthday = birthday;
+        this.email = email;
+        this.fullName = fullName;
+        this.gender = gender;
+        this.parentName = parentName;
+        this.parentPhone = parentPhone;
+        this.phone = phone;
+        this.relationship = relationship;
+        this.status = status;
+        this.studentCode = studentCode;
+        this.level = level;
+    }
 
-
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -57,11 +53,11 @@ public class StudentRes {
 		this.address = address;
 	}
 
-	public String getBirthday() {
+	public LocalDate getBirthday() {
 		return birthday;
 	}
 
-	public void setBirthday(String birthday) {
+	public void setBirthday(LocalDate birthday) {
 		this.birthday = birthday;
 	}
 
@@ -81,11 +77,11 @@ public class StudentRes {
 		this.fullName = fullName;
 	}
 
-	public Integer getGender() {
+	public String getGender() {
 		return gender;
 	}
 
-	public void setGender(Integer gender) {
+	public void setGender(String gender) {
 		this.gender = gender;
 	}
 
@@ -121,11 +117,11 @@ public class StudentRes {
 		this.relationship = relationship;
 	}
 
-	public Integer getStatus() {
+	public int getStatus() {
 		return status;
 	}
 
-	public void setStatus(Integer status) {
+	public void setStatus(int status) {
 		this.status = status;
 	}
 
@@ -137,48 +133,15 @@ public class StudentRes {
 		this.studentCode = studentCode;
 	}
 
-	public Level getLevel() {
+	public StudentLevelRes getLevel() {
 		return level;
 	}
 
-	public void setLevel(Level level) {
+	public void setLevel(StudentLevelRes level) {
 		this.level = level;
 	}
 
+	
 
-
-
-	public static class Level {
-        private Integer id;
-        private String name;
-        
-		public Level() {
-			super();
-		}
-		
-		public Level(Integer id, String name) {
-			super();
-			this.id = id;
-			this.name = name;
-		}
-
-		public Integer getId() {
-			return id;
-		}
-
-		public void setId(Integer id) {
-			this.id = id;
-		}
-
-		public String getName() {
-			return name;
-		}
-
-		public void setName(String name) {
-			this.name = name;
-		}
-       		
-        
-    }
+  
 }
-
